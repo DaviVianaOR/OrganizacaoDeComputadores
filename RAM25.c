@@ -3,7 +3,7 @@
 #include <time.h>
 #include "RAM25.h"
 
-int *memoria;
+int tamanho = 1000;
 
 int *alocaRAM(int tamanho){
     memoria = (int *)malloc(tamanho * sizeof(int));
@@ -51,13 +51,16 @@ void imprimir(int tamanho){
 }
 
 
-int main(){
+/*int main(){
     int tamanho = 100;
     
-    alocaRAM(tamanho);
-    criarRAM_aleatoria(tamanho);
-    imprimir(tamanho);
-    liberaRAM();
+    alocaRAM(tamanho);              // aloca espaço na RAM 
+    criarRAM_aleatoria(tamanho);    // preenche RAM com numeros aleatorios
+    setDado(0, 42);                 // armazena '42' no endereço 0
+    int valor = getDado(0);         // le o valor do endereço 0 acima (retorna 42)
+    imprimir(tamanho);              // mostra todo conteudo da RAM
+    liberaRAM();                    // libera a memória
+
 
     return 0;
-}
+}*/
